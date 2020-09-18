@@ -2,13 +2,9 @@
 require 'vendor/autoload.php';
 use GuzzleHttp\Client;
 
+
 $client = new GuzzleHttp\Client();
-$res = $client->request('GET', 'http://localhost/pruebavue/rest/public/api/productos', [
-    'Headers' => [
-    'User-Agent' => 'Access-Control-Allow-Origin: *',
-    'Access-Control-Allow-Methods: GET, POST, PUT, DELETE'
-    ]
-]);
+$res = $client->request('GET', 'http://localhost/pruebavue/rest/public/api/productos');
 echo $res->getStatusCode();
 // "200"
 echo $res->getHeader('content-type')[0];
