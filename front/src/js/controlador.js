@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 function obtenerImagenes() {
     axios({
         method: 'GET',
@@ -9,5 +11,25 @@ function obtenerImagenes() {
         console.error(error);
     });
 }
+
+//const app = new Vue({
+    export default {
+    data: function () {
+        return {
+            cart: []
+        }
+    },
+
+    computed: {
+        cartAmount(){
+            return this.cart.length
+        },
+
+        AgregarCarrito(){
+            alert('hola');
+        }
+    }
+}
+//})
 
 obtenerImagenes();

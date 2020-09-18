@@ -19,6 +19,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link">
+              <span>carrito</span> |
+              <span>{{ cartAmount }}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
               <router-link to="/tabla">Tabla</router-link>
             </a>
           </li>
@@ -27,12 +33,20 @@
               <router-link to="/about">About</router-link>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <router-link to="/login">Iniciar sesion</router-link>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <router-view/>
   </div>
 </template>
+<script src="./js/controlador.js"></script>
+
+
 
 <style>
 #app {
