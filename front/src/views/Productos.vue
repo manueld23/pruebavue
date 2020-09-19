@@ -38,7 +38,7 @@
         methods: {
             getImagenes(){
             axios
-            .get('http://localhost/pruebavue/rest/consumo.php')
+            .get('http://localhost/pruebavue/rest/public/api/productos')
                 .then(response => {
                 this.todos = response.data
                 })
@@ -57,9 +57,10 @@
             },
             
             AgregarCarrito(){
-                this.carrito.push(this.getProductoId);
-                //let m = this.cart;
-                //console.log(g);
+                this.carrito.push(this.getProductoId)
+                /*this.carrito.push(this.getProductoId);
+                let m = this.carrito;
+                console.log(m);*/
             }
         }      
    }

@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+/*require 'vendor/autoload.php';
 use GuzzleHttp\Client;
 
 
@@ -10,9 +10,9 @@ echo $res->getStatusCode();
 echo $res->getHeader('content-type')[0];
 // 'application/json; charset=utf8'
 echo $res->getBody();
-// {"type":"User"...'
+// {"type":"User"...'*/
 
 
-//$data = json_decode( file_get_contents("http://localhost/pruebavue/rest/public/api/productos"), true);
-//print_r($data);
+$data = json_decode( file_get_contents("http://localhost/pruebavue/rest/public/api/productos"), true);
+print_r($data);
 ?>

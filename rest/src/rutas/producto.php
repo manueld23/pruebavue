@@ -2,10 +2,7 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+
 
 $app = new \Slim\App;
 
@@ -19,6 +16,8 @@ $app->get('/api/productos', function(Request $request, Response $response){
 
         if($resultado->rowCount() > 0){
             $clientes = $resultado->fetchAll(PDO::FETCH_OBJ);
+
+            
             echo json_encode($clientes);
         }else{
             echo json_encode('NO existen registros de clientes en la base de datos');
