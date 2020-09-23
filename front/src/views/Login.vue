@@ -45,7 +45,7 @@
 <script>
   
   import axios from 'axios'
-
+  axios.defaults.headers.common.Accept = 'application/json'
    export default {
         data(){
             return {
@@ -60,7 +60,7 @@
             getLogin(){
                axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
             axios
-            .post('http://localhost/pruebavue/rest/public/api/usuarios', {
+            .post('developers/pruebavue/rest/public/api/usuarios', {
                usuario: this.usuario,
                pass: this.pass
             })

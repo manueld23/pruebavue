@@ -19,7 +19,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link">
-              <span>carrito</span> |
+              <router-link to="/carrito">carrito</router-link> |
               <span>{{ cartAmount }}</span>
             </a>
           </li>

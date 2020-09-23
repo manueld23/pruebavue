@@ -1,0 +1,31 @@
+<template>
+    <div>
+        <h1>Carrito</h1>
+        <div class="container-table">
+            <table class="table table-light table-bordered">
+                <tbody>
+                    <tr>
+                        <th width="40%">Descripcion</th>
+                        <th width="15%">Cantidad</th>
+                        <th width="20%">Precio</th>
+                        <th width="20%">Total</th>
+                        <th width="5%">Descripcion</th>
+                    </tr>
+                    <tr>
+                        <th>Laptop</th>
+                        <th>1</th>
+                        <th>70000</th>
+                        <th>70000</th>
+                        <th><button class="btn btn-danger">Eliminar</button></th>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right"><h3>Total</h3></td>
+                        <td align="right"><h3>$7000</h3></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</template>

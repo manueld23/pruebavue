@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import tabla from '../views/tabla.vue'
 import Productos from '../views/Productos.vue'
 import Login from '../views/Login.vue'
+import Carrito from '../views/Carrito.vue'
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,11 @@ const routes = [
     path: '/productos',
     name: 'Productos',
     component: Productos
+  },
+  {
+    path: '/carrito',
+    name: 'Carrito',
+    component: Carrito
   },
   {
     path: '/tabla',

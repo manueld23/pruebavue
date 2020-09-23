@@ -36,7 +36,7 @@ $app->group('/api', function () {
     $this->map(['PUT', 'OPTIONS'], '/{user_id:[0-9]+}', function ($request, $response, $arguments) {
         // Your code here...
     });
-  $app->map(['GET','POST','OPTIONS'],'/usuarios', function(Request $request, Response $response){
+  $app->map(['GET','OPTIONS'],'/usuarios', function(Request $request, Response $response){
     $id_cliente = $request->getAttribute('id');
     $usuario = $request->getParsedBody()['usuario'];
     $contrasenia = $request->getParsedBody()['contrasenia'];

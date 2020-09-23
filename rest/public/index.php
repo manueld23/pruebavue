@@ -9,5 +9,6 @@ $app = new \Slim\App;
 
 //ruta clientes
 require '../src/rutas/producto.php';
+//require '../src/rutas/login.php';
 
 $app->run();
