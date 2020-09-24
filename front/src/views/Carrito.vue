@@ -11,11 +11,11 @@
                         <th width="20%">Total</th>
                         <th width="5%">Descripcion</th>
                     </tr>
-                    <tr>
-                        <th>Laptop</th>
-                        <th>1</th>
-                        <th>70000</th>
-                        <th>70000</th>
+                    <tr v-for="car in carrit" :key="car.id">
+                        <th>{{ car }}</th>
+                        <th>{{ car }}</th>
+                        <th>{{ car }}</th>
+                        <th></th>
                         <th><button class="btn btn-danger">Eliminar</button></th>
                     </tr>
                     <tr>
@@ -29,3 +29,27 @@
         
     </div>
 </template>
+
+<script>
+import axios from 'axios'
+axios.defaults.headers.common.Accept = 'application/json'
+   export default {
+        data(){
+            return {
+                carrit: []
+            }
+        },
+        mounted(){
+            this.getCarrito();
+        },
+        methods: {
+            getCarrito(){
+                this.carrit = JSON.parse(localStorage.getItem('nombre'));
+                //this.carrit = localStorage.getItem("nombre");
+                //let car = JSON.parse(localStorage.carrit);
+                console.log(this.carrit);
+            }
+            
+        }      
+   }
+</script>
