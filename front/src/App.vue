@@ -20,7 +20,7 @@
           <li class="nav-item">
             <a class="nav-link">
               <router-link to="/carrito">carrito</router-link> |
-              <span>{{ cartAmount }}</span>
+              <span></span>
             </a>
           </li>
           <li class="nav-item">
@@ -46,7 +46,9 @@
 </template>
 <script src="./js/controlador.js"></script>
 
-
+<script>
+    
+</script>
 
 <style>
 #app {

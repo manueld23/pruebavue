@@ -13,8 +13,6 @@ axios.defaults.headers.common.Accept = 'application/json'
         },
         mounted(){
             this.getProductos();
-            //this.AgregarCarrito();
-            //this.getProductoId();
         },
         methods: {
             getProductos(){
@@ -28,23 +26,12 @@ axios.defaults.headers.common.Accept = 'application/json'
                 .catch(e => console.log(e))
             },
 
-            getProductoId(todo){
-                let id = todo.id
-                //console.log(id);
-            axios
-            .get('/pruebavue/rest/public/api/productos/'+id)
-                .then(response => {
-                    console.log(response);
-                    //this.id = response.id
-                })
-                .catch(e => console.log(e))
-            },
-            
-            AgregarCarrito(todo){
-                //alert('hola');
-                this.carrito.push(todo)
+            AgregarCarrito2(producto){
+                this.carrito.push(producto)
+                localStorage.setItem("nombre", JSON.stringify(producto));
                 let m = this.carrito;
                 console.log(m);
-            }
+            },
+            
         }      
    }

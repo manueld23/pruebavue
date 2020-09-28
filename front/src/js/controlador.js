@@ -22,7 +22,9 @@ function obtenerImagenes() {
 
     computed: {
         cartAmount(){
-            return this.cart.length
+            /*this.cart = JSON.parse(localStorage.getItem('nombre'));
+            localStorage.setItem('nombre', JSON.stringify(this.cart));
+            return this.cart.length;*/
         },
 
         AgregarCarrito(){
