@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="appMenu">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <router-link class="navbar-brand" to="/">Imagenes</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,12 +14,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link">
-              <router-link to="/productos">Productos</router-link>
+              <router-link to="/productos" id="navProductos">Productos</router-link>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link">
-              <router-link to="/carrito">carrito</router-link> |
+              <router-link to="/carrito" id="navCarrito">carrito</router-link> |
               <span></span>
             </a>
           </li>
@@ -35,7 +35,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link">
-              <router-link to="/login">Iniciar sesion</router-link>
+              <router-link to="/login" id="navLogin">Iniciar sesion</router-link>
             </a>
           </li>
         </ul>
@@ -51,7 +51,7 @@
 </script>
 
 <style>
-#app {
+#appMenu {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

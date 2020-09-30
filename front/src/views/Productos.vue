@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="sProductos">
         <h1>Productos</h1>
         <div class="row">
             <div class="card col-md-4 offset-md-1" v-for="todo in todos" :key="todo.id" style="width: 18rem;">
@@ -9,10 +9,11 @@
                     <h5 class="card-title">{{ todo.nombre }}</h5>
                     <p class="card-text">{{ todo.descripcion }}</p>
                     <p class="card-text">Modelo: {{ todo.modelo }}</p>
+                    <label id="idProducto" hidden>{{ todo.id }}</label>
                     
                     <!--<Modal :producto="todo" :id="id">
                     </Modal>-->
-                    <button @click="getProductoId2(todo)"  type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                    <button id="btnModal" @click="getProductoId2(todo)"  type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
                         Producto
                     </button>
 
@@ -34,6 +35,7 @@
             <div class="modal-body" v-for="produc in todo" :key="produc.id">
                 <!--<form>-->
                     <div class="form-group">
+                    <label id="idProducto">{{ produc.id }}</label>
                         <img img width="60px" heigth="60px" :src="produc.imagen">
                     </div>
                     <div class="form-group">
@@ -43,7 +45,7 @@
                         <label for="recipient-name" class="col-form-label">Precio: {{ produc.precio }}</label>
                     </div>
                     <div class="form-group" id="aumentar">
-                        <select v-model="contador">
+                        <select v-model="contador" id="cantidadProducto">
                             <option disabled value="">Seleccione una cantidad</option>
                             <option>1</option>
                             <option>2</option>
@@ -56,11 +58,11 @@
                 
                 <!--<Carrito :producto="produc">
                 </Carrito>-->
-                <button type="button" @click="AgregarCarrito2(produc,contador)" class="btn btn-primary">Agregar al Carrito</button>
+                <button type="button" id="agregarCarrito" @click="AgregarCarrito2(produc,contador)" class="btn btn-primary">Agregar al Carrito</button>
                 <!--</form>-->
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="cerrar" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="sCarrito">
         <h1>Carrito</h1>
         <div class="container-table">
             <table class="table table-light table-bordered">
@@ -18,12 +18,15 @@
                         <th>{{ car.numero }}</th>
                         <th>{{ car.precio }}</th>
                         <td> {{car.precio*car.numero}}</td>
-                        <th><button @click="eliminarFila(car)" class="btn btn-danger">Eliminar</button></th>
+                        <th><button @click="eliminarFila(car)" class="btn btn-danger" id="btnEliminarP">Eliminar</button></th>
                     </tr>
                     <tr>
                         <td colspan="3" align="right"><h3>Total</h3></td>
                         <td align="right"><h3>{{ total }}</h3></td>
                         <td></td>
+                    </tr>
+                    <tr>
+                        <td><button id="btnComprar" @click="comprar()" class="btn btn-success">Comprar</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -75,6 +78,10 @@ axios.defaults.headers.common.Accept = 'application/json'
                     this.carrit.splice(indice, 1);
                     localStorage.setItem('nombre', JSON.stringify(this.carrit));
                 }
+            },
+
+            comprar(){
+                alert('Compra exitosa');
             }
 
             

@@ -11,7 +11,7 @@
          </tbody>
       </table>
 
-      <div class="container" id="app">
+      <div class="container" id="appLogin">
       
          <div class="container">
             <div class="panel panel-primary">
@@ -31,7 +31,7 @@
                   <div class="form-group">
                      <label class="control-label col-sm-2">  </label>
                      <div class="col-sm-5">
-                        <input type="button" @click='getLogin();' value="Login" class="btn btn-primary">                      
+                        <input type="button" id="btnLoguear" @click='getLogin();' value="Login" class="btn btn-primary">                      
                      </div>
                   </div>
                </div>
@@ -60,7 +60,7 @@
             getLogin(){
                axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
             axios
-            .post('developers/pruebavue/rest/public/api/usuarios', {
+            .post('/pruebavue/rest/public/api/usuarios', {
                usuario: this.usuario,
                pass: this.pass
             })
