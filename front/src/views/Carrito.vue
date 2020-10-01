@@ -55,21 +55,9 @@ axios.defaults.headers.common.Accept = 'application/json'
             }
         },
         methods: {
-            getCarrito(){
-                //this.carrit = JSON.parse(localStorage.getItem('nombre'));
-                //this.carrit = localStorage.getItem("nombre");
-                //let car = JSON.parse(localStorage.carrit);
-                //console.log(this.carrit);
-                //if(localStorage.getItem('nombre') === null) {
-                    //this.carrit = [];
-                //} else {
-                    this.carrit = JSON.parse(localStorage.getItem('nombre'));
-                    console.log(this.carrit);
-                    //console.log(this.subtotal);
-                //}
-                //return this.carri
-                
-                //console.log(vector);*/
+            getCarrito(){ 
+                this.carrit = JSON.parse(localStorage.getItem('nombre'));
+                console.log(this.carrit);
             },
 
             eliminarFila(car){
@@ -81,9 +69,8 @@ axios.defaults.headers.common.Accept = 'application/json'
             },
 
             comprar(){
-                alert('Compra exitosa');
+                alert('COMPRA EXITOSA');
             }
-
             
         }      
    }
