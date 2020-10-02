@@ -2,7 +2,7 @@
     <div id="sCarrito">
         <h1>Carrito</h1>
         <div class="container-table">
-            <table class="table table-light table-bordered">
+            <table class="table table-light table-bordered table-hover">
                 <thead>
                     <tr>
                         <th width="40%">Descripcion</th>
@@ -34,6 +34,12 @@
         
     </div>
 </template>
+
+<style>
+    .table-bordered{
+       border: 1px solid #333;
+    }
+</style>
 
 <script>
 import axios from 'axios'

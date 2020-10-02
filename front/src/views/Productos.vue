@@ -4,7 +4,7 @@
         
         <div class="row">
             <div class="card col-md-4 offset-md-1" v-for="todo in todos" :key="todo.id" style="width: 18rem;">
-                <img class="card-img-top" :src="todo.imagen"  width="70px" height="200px">
+                <img class="card-img-top" :src="todo.imagen"   height="200px">
                 <div class="card-body">
         
                     <h5 class="card-title">{{ todo.nombre }}</h5>
@@ -46,7 +46,7 @@
                         <label for="recipient-name" class="col-form-label">Precio: {{ produc.precio }}</label>
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Modelo: {{ produc.modelo }}</label>
+                        <label id="modelo" for="recipient-name" class="col-form-label">Modelo: {{ produc.modelo }}</label>
                     </div>
                     <div class="form-group" id="aumentar">
                         <select v-model="contador" id="cantidadProducto">
@@ -113,8 +113,8 @@ axios.defaults.headers.common.Accept = 'application/json'
             
             getProductoId2(todo){
                 let id = todo.id
-            axios
-            .get('/pruebavue/rest/public/api/productos/'+id)
+                axios
+                .get('/pruebavue/rest/public/api/productos/'+id)
                 .then(response => {
                     this.todo = response.data
                 })

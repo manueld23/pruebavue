@@ -24,9 +24,9 @@ describe('Search test cases', function(){
         cy.get('#sProductos').find('#idProducto').invoke("text").then((el) =>{
             console.log(el);
 
-        cy.get('#sProductos').find('#btnModal').click();
-        //cy.get('#aumentar > #cantidadProducto').select('2');
-        cy.get('#cantidadProducto').select('2');
+        cy.get('#sProductos').find('#btnModal',el).click();
+        cy.get('#aumentar > #cantidadProducto').select('2');
+        //cy.get('#cantidadProducto').select('2');
         //cy.get(`#exampleModal/${el} > .modal-dialog > .modal-content > .modal-body > #agregarCarrito`).click();
         cy.get('#agregarCarrito').click();
 
@@ -41,7 +41,9 @@ describe('Search test cases', function(){
     it('Test de Login', function(){
         cy.visit('http://localhost:8080/');
         cy.get('#navLogin').click();
-
+        
+        cy.get('#usuario').type('test');
+        cy.get('#pass').type('tester_0123456');
         cy.get('#appLogin').find('#btnLoguear').click();
     })
 });

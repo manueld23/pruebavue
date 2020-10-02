@@ -19,13 +19,13 @@
                   <div class="form-group">
                      <div class="col-sm-5">
                      <label class="control-label col-sm-2">Usuario:</label>
-                        <input class="form-control" type="text" name="usuario">
+                        <input class="form-control" id="usuario" type="text" name="usuario">
                      </div>
                   </div>
                   <div class="form-group">
                      <div class="col-sm-5">
                      <label class="control-label col-sm-2">Password:</label>
-                        <input class="form-control" type="password" name="pass">
+                        <input class="form-control" id="pass" type="password" name="pass">
                      </div>
                   </div>
                   <div class="form-group">
@@ -58,7 +58,8 @@
         },
         methods: {
             getLogin(){
-               axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+               alert('LOGUEADO');
+               /*axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
             axios
             .post('/pruebavue/rest/public/api/usuarios', {
                usuario: this.usuario,
@@ -67,7 +68,7 @@
                .then(response => {
                   console.log(response);
                })
-                  .catch(e => console.log(e))
+                  .catch(e => console.log(e))*/
             },
         }      
    }
