@@ -34,7 +34,9 @@
                 </button>
             </div>
             <div class="modal-body" v-for="produc in todo" :key="produc.id">
-                
+                <div id="precio" hidden>{{ produc.precio }}</div>
+                <div id="contador" hidden>{{ contador }}</div>
+
                     <div class="form-group">
                         <label id="idProducto" hidden>{{ produc.id }}</label>
                         <img img width="150px" height="150px" :src="produc.imagen">

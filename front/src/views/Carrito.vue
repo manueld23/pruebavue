@@ -1,7 +1,7 @@
 <template>
     <div id="sCarrito">
-        <h1>Carrito</h1>
-        <div class="container-table">
+        <h1>Carrito prueba 2 del commit</h1>
+        <div class="container-table" v-if="carrit != 0">
             <table class="table table-light table-bordered table-hover">
                 <thead>
                     <tr>
@@ -31,6 +31,9 @@
                 </tbody>
             </table>
         </div>
+        <div v-else>
+            <h3>No hay productos seleccionados</h3>
+        </div>
         
     </div>
 </template>
@@ -57,6 +60,9 @@ axios.defaults.headers.common.Accept = 'application/json'
         },
         computed: {
             total(){
+                if(this.carrit.reduce == null){
+                 alert('esta vacio');
+                }
                 return this.carrit.reduce((acumulador, item) => acumulador + Number(item.precio)*Number(item.numero),0);
             }
         },
